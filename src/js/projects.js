@@ -1,10 +1,7 @@
 import Swiper from 'swiper';
 import 'swiper/css';
-// import 'swiper/css/bundle';
-import 'swiper/css/navigation';
 
-
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('.projects-swiper', {
   direction: 'horizontal',
   initialSlide: 0,
   spaceBetween: 32,
@@ -18,24 +15,26 @@ const swiper = new Swiper('.swiper', {
   },
 });
 
-document.querySelectorAll('.swiper-slide a, .swiper-slide button').forEach(el => {
-  el.addEventListener('focus', () => {
-    const slide = el.closest('.swiper-slide');
-    const slideIndex = Array.from(swiper.slides).indexOf(slide);
+document
+  .querySelectorAll('.swiper-slide a, .swiper-slide button')
+  .forEach(el => {
+    el.addEventListener('focus', () => {
+      const slide = el.closest('.swiper-slide');
+      const slideIndex = Array.from(swiper.slides).indexOf(slide);
 
-    if (slideIndex !== swiper.activeIndex) {
-      swiper.slideTo(slideIndex, 300);
+      if (slideIndex !== swiper.activeIndex) {
+        swiper.slideTo(slideIndex, 300);
 
-      setTimeout(() => {
-        slide.scrollIntoView({
-          behavior: 'smooth',
-          block: 'nearest',
-          inline: 'center',
-        });
-      }, 300);
-    }
+        setTimeout(() => {
+          slide.scrollIntoView({
+            behavior: 'smooth',
+            block: 'nearest',
+            inline: 'center',
+          });
+        }, 300);
+      }
+    });
   });
-});
 
 function updateNavBtn() {
   const btnPrev = document.getElementById('btn-prev');
@@ -62,7 +61,7 @@ updateNavBtn();
 
 swiper.on('slideChange', updateNavBtn);
 
-document.addEventListener('keydown', (event) => {
+document.addEventListener('keydown', event => {
   if (event.key === 'ArrowRight' && !swiper.isEnd) {
     swiper.slideNext();
   } else if (event.key === 'ArrowLeft' && !swiper.isBeginning) {
