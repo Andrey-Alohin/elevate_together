@@ -1,5 +1,8 @@
-.swiper-slide {
+.reviews-list-item.swiper-slide {
   align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  max-height: 302px;
 }
 
 .reviews-title {
@@ -36,6 +39,10 @@
   letter-spacing: -0.02em;
   color: #fafafa;
   margin-bottom: 8px;
+}
+
+.review-text-container {
+  overflow: scroll;
 }
 
 .review-text {

@@ -20,7 +20,9 @@ function renderReviews(reviews) {
       return `<li class="reviews-list-item swiper-slide" id="review-${id}">
         <img src="${avatar_url}" class="review-img" />
         <p class="review-name">${author}</p>
+        <div class="review-text-container">
         <p class="review-text">${review}</p>
+        </div>
       </li>`;
     })
     .join('');
