@@ -69,9 +69,6 @@ function linkListenerBurger() {
 // ф-я показу меню таблет та десктоп
 function showMenuTabletDesktop(event) {
   try {
-    // menuItemEl.classList.add('active');
-    // event.stopPropagation(); //зупиняємо евент, щоб неспрацювало закриття меню
-    // document.addEventListener('click', closeMenuTabletDesktop);
     event.stopPropagation();
 
     if (menuItemEl.classList.contains('active')) {
