@@ -19,9 +19,9 @@
       referrerpolicy="no-referrer"
     />
     <script type="module" crossorigin src="/elevate_together/index.js"></script>
-    <link rel="modulepreload" crossorigin href="/elevate_together/assets/vendor-E9QdOeiT.js">
-    <link rel="stylesheet" crossorigin href="/elevate_together/assets/vendor-BMD19QWe.css">
-    <link rel="stylesheet" crossorigin href="/elevate_together/assets/index-C9QHPRAq.css">
+    <link rel="modulepreload" crossorigin href="/elevate_together/assets/vendor-Kd0EVFxC.js">
+    <link rel="stylesheet" crossorigin href="/elevate_together/assets/vendor-BQMbBNNF.css">
+    <link rel="stylesheet" crossorigin href="/elevate_together/assets/index-Bq49IQVK.css">
   </head>
   <body>
     <header class="header">
@@ -186,7 +186,7 @@
       <section class="projects-section" id="projects">
   <div class="container">
     <h2 class="projects-subtitle">projects</h2>
-    <div class="swiper">
+    <div class="swiper" id="project-swiper">
       <ul class="swiper-wrapper">
         <li class="swiper-slide">
           <div class="project-box-flex">
@@ -483,8 +483,26 @@
   </div>
 </section>
 
-      <section>
-  <div class="container"></div>
+      <section class="reviews-section" id="reviews">
+  <div class="container">
+    <h2 class="reviews-title">Reviews</h2>
+    <div class="reviews-placeholder hidden">Not Found</div>
+    <div class="swiper reviews-swiper reviews-gallery">
+      <ul class="reviews-list swiper-wrapper"></ul>
+      <div class="reviews-btn-box hidden">
+        <button class="reviews-arow-btn prev">
+          <svg class="arrow-icon" width="24" height="24">
+            <use href="/elevate_together/assets/sprites-Dpv9p_lv.svg#arrow_left"></use>
+          </svg>
+        </button>
+        <button class="reviews-arow-btn next">
+          <svg class="arrow-icon" width="24" height="24">
+            <use href="/elevate_together/assets/sprites-Dpv9p_lv.svg#arrow_right"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
 </section>
 
     </main>
