@@ -31,6 +31,7 @@
 
 .reviews-list {
   display: flex;
+  margin-bottom: 32px;
 }
 
 .reviews-list-item {
@@ -71,11 +72,9 @@
   display: flex;
   gap: 12px;
   justify-content: center;
-  margin-top: 32px;
 }
 @media only screen and (min-width: 768px) {
   .reviews-btn-box {
-    margin-top: 64px;
     gap: 20px;
   }
 }
@@ -112,6 +111,7 @@
 
 .arrow-icon {
   stroke: #fafafa;
+  fill: transparent;
 }
 @media only screen and (min-width: 768px) {
   .arrow-icon {

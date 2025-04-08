@@ -26,7 +26,7 @@ function renderReviews(reviews) {
     .map(({ id, author, avatar_url, review }) => {
       return `<li class="reviews-list-item swiper-slide" id="review-${id}">
         <img src="${avatar_url}" class="review-img" />
-        <p class="review-name">${author}</p>
+        <h3 class="review-name">${author}</h3>
         <div class="review-text-container">
         <p class="review-text">${review}</p>
         </div>
@@ -82,6 +82,7 @@ async function processReviews() {
   } else {
     renderError(error);
   }
+  observer.unobserve(reviewsSection);
 }
 
 const observer = new IntersectionObserver(
