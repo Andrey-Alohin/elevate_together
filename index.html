@@ -21,7 +21,7 @@
     <script type="module" crossorigin src="/elevate_together/index.js"></script>
     <link rel="modulepreload" crossorigin href="/elevate_together/assets/vendor-795ZWqCz.js">
     <link rel="stylesheet" crossorigin href="/elevate_together/assets/vendor-CyFlzuZ4.css">
-    <link rel="stylesheet" crossorigin href="/elevate_together/assets/index-C_4ABljG.css">
+    <link rel="stylesheet" crossorigin href="/elevate_together/assets/index-CdVqiqPx.css">
   </head>
   <body>
     <header class="header">
@@ -642,8 +642,87 @@
 </section>
 
     </main>
-    <footer>
-  <div class="container"></div>
+    <footer class="footer" id="footer">
+  <div class="container">
+    <div class="img-t">
+      <div class="title-img">
+        <img class="img-footer" src="/elevate_together/assets/project%20image-BgHlQLgS.png" />
+        <h2 class="title-footer">LET’S <span class="highlight">WORK</span></h2>
+      </div>
+      <h2 class="together">TOGETHER</h2>
+    </div>
+    <form class="div-button-form">
+      <div class="div-input">
+        <!-- there some updates for full div-form -->
+        <input
+          id="emailInput"
+          class="footer-input"
+          type="email"
+          placeholder="clients@gmail.com"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
+          required
+        />
+        <p id="emailMessage" class="input-message"></p>
+      </div>
+      <input
+        type="text"
+        id="textInput"
+        class="footer-comment"
+        placeholder="comments"
+        maxlength="100"
+      />
+      <button type="submit" class="send-btn">Send</button>
+    </form>
+
+    <ul class="contact-menu">
+      <li class="list-item">
+        <button class="tel-button">
+          <a class="mail" href="mailto:lloydjefferson@gmail.com"
+            >lloydjefferson@gmail.com</a
+          >
+        </button>
+      </li>
+      <li class="list-item">
+        <button class="tel-button">
+          <a class="tel" href="tel:+380111111111">+380 11 111 11 11</a>
+        </button>
+      </li>
+    </ul>
+
+    <div class="backdrop">
+      <div class="footer-modal">
+        <button type="button" class="modal-btn">
+          <svg
+            width="28"
+            height="28"
+            viewBox="0 0 28 28"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M21 7L7 21"
+              stroke="#FAFAFA"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+            <path
+              d="M7 7L21 21"
+              stroke="#FAFAFA"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </button>
+        <h3 class="modal-title">Thank you for your interest in cooperation!</h3>
+        <p class="modal-p">
+          The manager will contact you shortly to discuss further details and
+          opportunities for cooperation. Please stay in touch.
+        </p>
+      </div>
+    </div>
+  </div>
 </footer>
 
 
