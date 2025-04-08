@@ -6,7 +6,6 @@ const dropdownEl = document.querySelector('.header-dropdown-wrapper');
 const closeMenuBtnEl = document.querySelector('.header-close-btn');
 const menuBtnEl = document.querySelector('.header-menu-title');
 const menuItemEl = document.querySelector('.header-nav-menu-list');
-const menuLinksEl = document.querySelectorAll('.header-nav-menu-item a');
 
 // Додаємо слухача одразу
 burgerEl.addEventListener('click', showMenuMobile);
@@ -84,23 +83,6 @@ function showMenuTabletDesktop(event) {
       menuItemEl.classList.add('active');
       document.addEventListener('click', closeMenuTabletDesktop);
     }
-  } catch (error) {
-    console.log(error);
-    console.log(error.message);
-    iziToast.error({
-      title: 'Error',
-      message: 'Sorry, an error occurred. Please try again later.',
-      position: 'topRight',
-    });
-  }
-}
-
-function linkListenerMenu() {
-  try {
-    menuLinksEl.forEach(link => {
-      link.removeEventListener('click', linkListenerMenu);
-    });
-    menuItemEl.classList.remove('active');
   } catch (error) {
     console.log(error);
     console.log(error.message);

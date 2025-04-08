@@ -1,9 +1,9 @@
-/* :root { */
-/* Фон, видалити, бо буде базовий */
-/* background-color: #5c239e;
-} */
 .modal-open {
   overflow: hidden;
+}
+.button-header {
+  /* Стилі базові для кнопки */
+  all: unset;
 }
 .header {
   position: absolute;
@@ -15,13 +15,14 @@
   display: flex;
   justify-content: space-between;
 }
-
+.header-link {
+  display: flex;
+  gap: 8px;
+}
 .header-logo {
   /* Стилі для обгортки логотипа */
   display: flex;
   gap: 8px;
-  /* width: 172px;
-  height: 80px; */
 }
 .header-logo-bc {
   /* Стилі для логотипа*/
@@ -29,13 +30,12 @@
   border-radius: 18px;
   width: 80px;
   height: 80px;
-
-  /* background-image: url('../img/header-logo.jpg'); */
 }
 
 .header-logo-jefferson {
   /* Стилі для призвища jefferson логотипа*/
-  /* margin-left: 8px; */
+  font-size: 19px;
+  line-height: 19px;
 }
 
 .header-nav {
@@ -59,14 +59,16 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
+    position: relative;
   }
 }
-
+.header-nav-overlay {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
 .header-menu-title {
-  /* padding: 10px; */
-  /* width: 60px; */
   height: 39px;
-  /* margin-bottom: 8px; */
   text-decoration: underline;
   text-underline-offset: 3px;
 }
@@ -74,18 +76,32 @@
   display: none;
   text-align: center;
 }
+@media (min-width: 768px) {
+  .header-nav-menu-list {
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: 150ms ease-in-out;
+    transition-property: opacity, visibility;
+  }
+}
 
 .header-nav-menu-list.active {
-  display: flex;
-  flex-direction: column;
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: 300ms ease-in-out;
+  transition-property: opacity;
 }
 
 .header-nav-menu-item {
+  height: 19px;
 }
 
 .header-order {
   display: none;
-  /* padding-top: 18px; */
 }
 
 @media (min-width: 768px) {
@@ -99,7 +115,6 @@
   align-items: center;
   justify-content: center;
   border-radius: 60px;
-  /* padding: 18px 24px; */
   width: 163px;
   height: 55px;
   background-color: #ed3b44;
@@ -124,7 +139,6 @@
   right: 0;
   width: 100%;
   height: 100%;
-  /* padding: 72px 16px 40px; */
 
   display: flex;
   flex-direction: column;
@@ -146,6 +160,11 @@
   transform: translateX(0); /* Кінцеве положення */
   opacity: 1;
   visibility: inherit;
+}
+@media (min-width: 768px) {
+  .header-dropdown-wrapper.active {
+    display: none;
+  }
 }
 
 .header-dropdown-wrapper li {
@@ -176,7 +195,7 @@
   /* Стилі для закриття мобільного меню */
   position: absolute;
   top: 32px;
-  right: 16px;
+  right: 0;
   width: 28px;
   height: 28px;
 }
