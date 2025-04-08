@@ -84,6 +84,7 @@
     height: 45px;
     background-color: #ed3b44;
     letter-spacing: -0.02em;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .projects-link:hover,
 .projects-link:focus {
@@ -151,6 +152,7 @@
     width: 52px;
     height: 52px;
     background-color: transparent;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .projects-arow-btn.disabled {
@@ -180,13 +182,23 @@
     }
 }
 
-.swiper-slide {
-    flex: 0 0 auto;
-    width: auto;
-}
-
 @media only screen and (min-width: 1440px) {
     .project-box-flex {
         display: flex;
     }
+}
+
+.swiper {
+    height: auto;
+}
+
+.swiper-wrapper {
+    width: auto;
+}
+
+.swiper-slide {
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    height: auto;
 }

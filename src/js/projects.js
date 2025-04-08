@@ -1,19 +1,40 @@
 import Swiper from 'swiper';
 import 'swiper/css';
+// import 'swiper/css/bundle';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
 
 
 const swiper = new Swiper('.swiper', {
   direction: 'horizontal',
   initialSlide: 0,
   spaceBetween: 32,
-  slidesPerView: "auto",
+  autoHeight: true,
+  slidesPerView: 1,
+  grabCursor: true,
 
   navigation: {
     nextEl: '#btn-next',
     prevEl: '#btn-prev',
   },
+});
+
+document.querySelectorAll('.swiper-slide a, .swiper-slide button').forEach(el => {
+  el.addEventListener('focus', () => {
+    const slide = el.closest('.swiper-slide');
+    const slideIndex = Array.from(swiper.slides).indexOf(slide);
+
+    if (slideIndex !== swiper.activeIndex) {
+      swiper.slideTo(slideIndex, 300);
+
+      setTimeout(() => {
+        slide.scrollIntoView({
+          behavior: 'smooth',
+          block: 'nearest',
+          inline: 'center',
+        });
+      }, 300);
+    }
+  });
 });
 
 function updateNavBtn() {
