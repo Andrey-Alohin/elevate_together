@@ -15,6 +15,20 @@
   margin-bottom: 32px;
 }
 
+.reviews-placeholder {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: rgba(250, 250, 250, 0.6);
+  margin-bottom: 8px;
+  text-align: center;
+}
+
+.reviews-placeholder.hidden {
+  display: none;
+}
+
 .reviews-list {
   display: flex;
 }
@@ -60,10 +74,14 @@
   margin-top: 32px;
 }
 @media only screen and (min-width: 768px) {
-  .projects-btn-box {
+  .reviews-btn-box {
     margin-top: 64px;
     gap: 20px;
   }
+}
+
+.reviews-btn-box.hidden {
+  display: none;
 }
 
 .reviews-arow-btn {
@@ -105,10 +123,4 @@
 .swiper-slide {
   flex: 0 0 auto;
   width: auto;
-}
-
-@media only screen and (min-width: 1440px) {
-  .project-box-flex {
-    display: flex;
-  }
 }
